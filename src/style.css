@@ -63,3 +63,11 @@ li:first-letter {
 .weather-temperature .active1 {
     text-decoration: none; 
 }
+.weather-fofecast {
+    margin-top: 20px;
+    text-align: center;
+}
+.weather-fofecast-date {
+    font-size: 16px;
+    color:rgb(26, 23, 23);
+}
