@@ -66,10 +66,14 @@ li:first-letter {
 .weather-fofecast {
     margin-top: 20px;
     text-align: center;
+    color:rgb(0, 0, 0);
 }
 .weather-fofecast-date {
     font-size: 16px;
-    color:rgb(26, 23, 23);
+   opacity: 0.6;
+}
+.weather-fofecast-temperature-min {
+    opacity: 0.6;
 }
 .weather-fofecast-tematurepers {
     font-size: 13px;
