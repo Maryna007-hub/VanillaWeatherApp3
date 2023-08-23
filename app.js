@@ -45,6 +45,9 @@ forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;
 console.log(forecastHTML);
 }
+function getForecast(coordinates) {
+  console.log(coordinates);
+}
 
 function displayTemperature(response) {
 
