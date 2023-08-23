@@ -26,20 +26,20 @@ function displayForecast() {
   
   let forecastHTML = '<div class="row">';
   let days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
-  forecastHTML = 
-  forecastHTML + 
- ` <div class="row">
-    <div class="col-2"> 
+days.forEach(function(day) {
+     forecastHTML = 
+    forecastHTML + 
+    `<div class="col-2"> 
       <div class="weather-fofecast-date">
-      Mon
-    </div>
+      ${day}
+      </div>
      <img src="https://openweathermap.org/img/wn/01n@2x.png" alt="clear" width="42" id="icon"/>
-    
      <div class="weather-fofecast-tematurepers">
-      <span class="weather-fofecast-temperature-max">18°</span>
-     <span class="weather-fofecast-temperature-min">12°</span>
-    </div>
-</div>`;
+        <span class="weather-fofecast-temperature-max">18°</span>
+        <span class="weather-fofecast-temperature-min">12°</span>
+     </div>
+    </div>`;
+});
 
 forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;
