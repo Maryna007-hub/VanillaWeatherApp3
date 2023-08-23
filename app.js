@@ -22,11 +22,13 @@ function formatDate(timestamp) {
     return `${day} ${hours}:${minutes}`;
 }
 function displayForecast() {
-  let foofecastElement = document.querySelector('#forecast')
-foofecastElement.innerHTML = 
-` <div class="row">
-<div class="col-2"> 
-    <div class="weather-fofecast-date">
+  let forecastElement = document.querySelector('#forecast')
+  let forecastHTML = '<div class"row">';
+
+  forecastHTML = forecastHTML + 
+ ` <div class="row">
+    <div class="col-2"> 
+      <div class="weather-fofecast-date">
       Thu
     </div>
      <img src="https://openweathermap.org/img/wn/01n@2x.png" alt="clear" width="42" id="icon"/>
@@ -35,8 +37,22 @@ foofecastElement.innerHTML =
       <span class="weather-fofecast-temperature-max">18°</span>
      <span class="weather-fofecast-temperature-min">12°</span>
     </div>
-</div>
 </div>`;
+forecastHTML = forecastHTML + 
+` <div class="row">
+   <div class="col-2"> 
+     <div class="weather-fofecast-date">
+     Thu
+   </div>
+    <img src="https://openweathermap.org/img/wn/01n@2x.png" alt="clear" width="42" id="icon"/>
+   
+    <div class="weather-fofecast-tematurepers">
+     <span class="weather-fofecast-temperature-max">18°</span>
+    <span class="weather-fofecast-temperature-min">12°</span>
+   </div>
+</div>`;
+forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
 }
 
 function displayTemperature(response) {
