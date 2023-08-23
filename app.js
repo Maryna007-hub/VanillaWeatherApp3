@@ -21,9 +21,10 @@ function formatDate(timestamp) {
     let day = days[date.getDay()];
     return `${day} ${hours}:${minutes}`;
 }
-function displayForecast() {
+function displayForecast(response) {
   let forecastElement = document.querySelector('#forecast')
-  
+  console.log(response.data);
+
   let forecastHTML = '<div class="row">';
   let days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
 days.forEach(function(day) {
@@ -112,5 +113,5 @@ let celsiusTemperature = null;
    celsiusLink.addEventListener('click', displayCelsiusTemperature);
 
   search('Lisbon');
-  displayForecast();
+
 
